@@ -7,8 +7,7 @@ from swarmauri.standard.messages.concrete.SystemMessage import SystemMessage
 from swarmauri.standard.agents.concrete.SimpleConversationAgent import SimpleConversationAgent
 from swarmauri.standard.conversations.concrete.MaxSizeConversation import MaxSizeConversation
 
-
-load_dotenv(dotenv_path="test.env")
+load_dotenv()
 
 API_KEY = os.environ.get("GROQ_API_KEY")
 
@@ -44,4 +43,4 @@ demo = gr.ChatInterface(
 )
 
 if __name__ == "__main__":
-    demo.launch()
+    demo.launch(server_port=8000)
